@@ -1,0 +1,7 @@
+# 运行必需
+websockets>=12.0
+tkinterdnd2>=0.4.0
+
+# 仅打包成 exe 时需要（平时运行用不到）
+pyinstaller>=6.0
+Pillow>=9.0
