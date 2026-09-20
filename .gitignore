@@ -1,0 +1,17 @@
+.venv/
+venv/
+build/
+dist/
+__pycache__/
+*.pyc
+*.spec
+*.exe
+config.json
+icon.ico
+icon.PNG
+*.ico
+*.png
+voices/*
+!voices/把语音文件放这里.txt
+.idea/
+.vscode/
