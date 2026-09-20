@@ -2,10 +2,11 @@
 .venv/
 venv/
 
-# 打包产物（build_exe.py 每次会重新生成）
+# 打包产物（build_exe.py 每次会重新生成；exe 走 Release，不进仓库）
 build/
 dist/
 *.spec
+*.exe
 
 # Python 缓存
 __pycache__/
