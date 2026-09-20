@@ -226,8 +226,8 @@ class App:
             command=self.toggle_topmost,
         ).pack(side="right")
 
-        body = Frame(root, padx=10, pady=(0, 10))
-        body.pack(fill="both", expand=True)
+        body = Frame(root, padx=10)
+        body.pack(fill="both", expand=True, pady=(0, 10))
 
         # ---- 左栏：目标列表 ----
         left = Frame(body)
