@@ -30,8 +30,11 @@ def main():
         "--windowed",
         "--name",
         APP_NAME,
+        # 强制把 PySide6 / shiboken6 完整收进来，避免运行时 No module named PySide6
         "--collect-all",
-        "tkinterdnd2",
+        "PySide6",
+        "--collect-all",
+        "shiboken6",
     ]
 
     icon = os.path.join(HERE, "icon.ico")
@@ -43,6 +46,14 @@ def main():
         print(f"[图标] 使用 {icon}")
     else:
         print("[图标] 没找到 icon.ico，用默认图标（想换就把 icon.ico 放这里再打包）")
+
+    # 把字体 + 图标素材（assets 文件夹）一起打进 exe
+    assets = os.path.join(HERE, "assets")
+    if os.path.isdir(assets):
+        cmd += ["--add-data", f"{assets};assets"]
+        print(f"[资源] 打包 assets（字体/图标）")
+    else:
+        print("[资源] 没找到 assets 文件夹，界面会退回系统字体、不显示图标")
 
     cmd.append("voice_gui.py")
 

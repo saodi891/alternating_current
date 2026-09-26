@@ -11,6 +11,7 @@ icon.ico
 icon.PNG
 *.ico
 *.png
+assets/
 voices/*
 !voices/把语音文件放这里.txt
 .idea/
